@@ -1,13 +1,15 @@
-Name:		lincvs
 Summary:	A QT-based tool for managing CVS
-Version:	0.2.5
+Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na QT
+Name:		lincvs
+Version:	0.4.0
 Release:	1
-Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/%{name}_%{version}.tar.gz
+License:	GPL
 Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Group(pl):	Programowanie/Zarz±dzanie wersjami
-URL:		http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/lincvsen.html
-License:	GPL
+Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
+Patch0:		%{name}-makefile.patch
+URL:		http://www.lincvs.org
 Requires:	cvs
 BuildRequires:	qt >= 2.0.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,21 +27,23 @@ contrast to other programs this one is REALLY easy to use ;-).
 
 %prep
 rm -rf $RPM_BUILD_ROOT
-
-%setup -q -n LinCVS-%{version}
+%setup -q
 
 %build
+%configure2_13
 %{__make} QTDIR=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-cp LinCVS $RPM_BUILD_ROOT%{_bindir}
+
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf AUTHORS ChangeLog NEWS README SSH.txt
 
 %clean
 rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README.TXT
-%attr(755,root,root) %{_bindir}/LinCVS
+%doc *.gz
+%attr(755,root,root) %{_bindir}/*
