@@ -10,7 +10,8 @@ Group(pl):	Programowanie/Zarz±dzanie wersjami
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
 URL:		http://www.lincvs.org
 Requires:	cvs
-BuildRequires:	qt >= 2.0.2
+BuildRequires:	qt-devel >= 2.2.1
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define _prefix	/usr/X11R6
@@ -23,6 +24,12 @@ repository, to update or retrieve the status of a working directory or
 single files and common operations like add, remove and commit, diff
 against the repository or view of the log messages in list form. In
 contrast to other programs this one is REALLY easy to use ;-).
+
+%description -l pl
+LinCVS dzia³a jako wiarygodny (!) graficzny frontend dla klienta CVS.
+Pozwala na import modu³ów z i do respozytorium oraz wszelkiego typu inne
+zwyk³e operacje w CVS'ie.
+W przeciwieñstwie do wielu innych programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
 rm -rf $RPM_BUILD_ROOT
