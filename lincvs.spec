@@ -1,3 +1,4 @@
+
 %define		_rc	rc1
 
 Summary:	A QT-based tool for managing CVS
@@ -47,14 +48,13 @@ qmake -o Makefile lincvs.pro
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
-	$RPM_BUILD_ROOT%{_applnkdir}/Development \
-	$RPM_BUILD_ROOT%{_pixmapsdir} \
-	$RPM_BUILD_ROOT%{_mandir}/man1
+	$RPM_BUILD_ROOT%{_desktopdir} \
+	$RPM_BUILD_ROOT%{_pixmapsdir} 
 
 install lincvs.bin $RPM_BUILD_ROOT%{_bindir}/lincvs
 
 install LinCVS/AppIcon.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/lincvs.xpm
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -63,5 +63,5 @@ rm -fr $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS LICENSE doc/{README,SSH-HOWTO.txt,PROXY-HOWTO.txt}
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Development/*
-%{_pixmapsdir}/*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.xpm
