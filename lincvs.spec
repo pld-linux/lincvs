@@ -14,7 +14,6 @@ BuildRequires:	libtool
 BuildRequires:	qt-devel >= 2.2.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 LinCVS acts as a reliable (!) graphical frontend for the CVS-client
