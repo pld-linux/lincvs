@@ -1,18 +1,17 @@
 
-%define		_rc	rc1
+%define 	_srcrel	1
 
 Summary:	A QT-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na QT
 Name:		lincvs
-Version:	1.3.0
-Release:	0.%{_rc}.1
+Version:	1.3.2
+Release:	0.1
 # GPL if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL
 Group:		Development/Version Control
-Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/ht_%{name}-%{version}%{_rc}/%{name}-%{version}-%{_rc}-generic-src.tgz
-# Source0-md5:	3812726c55d7df4c497fba43df33b5e4
+Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/hl_%{name}-%{version}/%{name}-%{version}-%{_srcrel}-generic-src.tgz
+# Source0-md5:	1dd48ddaa98192f271381b2217e0941f
 Source1:	LinCVS.desktop
-Patch0:		%{name}-config.patch
 URL:		http://www.lincvs.org/
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
@@ -36,8 +35,7 @@ inne zwyk³e operacje w CVSie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
-%setup -q -n %{name}-%{version}-%{_rc}
-%patch0 -p1
+%setup -q
 
 %build
 export QTDIR=%{_prefix}
@@ -49,7 +47,7 @@ qmake -o Makefile lincvs.pro
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_desktopdir} \
-	$RPM_BUILD_ROOT%{_pixmapsdir} 
+	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 install lincvs.bin $RPM_BUILD_ROOT%{_bindir}/lincvs
 
