@@ -2,7 +2,7 @@ Summary:	A QT-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na QT
 Name:		lincvs
 Version:	1.1.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
@@ -45,10 +45,15 @@ qmake -o Makefile lincvs.pro
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Development
+install -d $RPM_BUILD_ROOT%{_bindir} \
+	$RPM_BUILD_ROOT%{_applnkdir}/Development \
+	$RPM_BUILD_ROOT%{_pixmapsdir} \
+	$RPM_BUILD_ROOT%{_mandir}/man1
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+install lincvs.bin $RPM_BUILD_ROOT%{_bindir}/lincvs
 
+install LinCVS/AppIcon.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/lincvs.xpm
+install lincvs.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
 
 %clean
@@ -56,6 +61,8 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README SSH.txt
+%doc AUTHORS ChangeLog NEWS README SSH-HOWTO.txt PROXY-HOWTO.txt
 %attr(755,root,root) %{_bindir}/*
-%attr(644,root,root) %{_applnkdir}/Development/*
+%{_applnkdir}/Development/*
+%{_pixmapsdir}/*
+%{_mandir}/man1/*
