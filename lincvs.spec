@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	qt-devel >= 2.2.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _prefix	/usr/X11R6
+%define		_prefix		/usr/X11R6
 
 %description
 LinCVS acts as a reliable (!) graphical frontend for the CVS-client
@@ -42,20 +42,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Development
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
 
-gzip -9nf AUTHORS ChangeLog NEWS README SSH.txt
-
 %clean
 rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README SSH.txt
 %attr(755,root,root) %{_bindir}/*
 %attr(644,root,root) %{_applnkdir}/Development/*
