@@ -8,6 +8,7 @@ Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
+Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org
 Requires:	cvs
 BuildRequires:	qt-devel >= 2.2.1
@@ -42,7 +43,11 @@ rm -rf $RPM_BUILD_ROOT
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Development
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
 
 gzip -9nf AUTHORS ChangeLog NEWS README SSH.txt
 
@@ -53,3 +58,4 @@ rm -fr $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
+%attr(644,root,root) %{_applnkdir}/Development/*
