@@ -5,7 +5,7 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Development/Version Control
-Group(pl):	Programowanie/Zarz±dzanie wersjami
+Group(de):	Entwicklung/Versionkontrolle
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
 Source1:	LinCVS.desktop
@@ -28,9 +28,9 @@ contrast to other programs this one is REALLY easy to use ;-).
 
 %description -l pl
 LinCVS dzia³a jako wiarygodny (!) graficzny frontend dla klienta CVS.
-Pozwala na import modu³ów z i do respozytorium oraz wszelkiego typu inne
-zwyk³e operacje w CVS'ie.
-W przeciwieñstwie do wielu innych programów jest NAPRAWDÊ prosty w u¿yciu ;-)
+Pozwala na import modu³ów z i do respozytorium oraz wszelkiego typu
+inne zwyk³e operacje w CVS'ie. W przeciwieñstwie do wielu innych
+programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
 rm -rf $RPM_BUILD_ROOT
