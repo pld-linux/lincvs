@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 %setup -q
 
 %build
-libtoolize --copy --force
+%{__libtoolize}
 %configure2_13
 %{__make} QTDIR=%{_prefix}
 
