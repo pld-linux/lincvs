@@ -5,8 +5,6 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Development/Version Control
-Group(de):	Entwicklung/Versionkontrolle
-Group(pl):	Programowanie/Zarz±dzanie wersjami
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
 Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org
