@@ -1,12 +1,14 @@
+%define		_rc	rc1
+
 Summary:	A QT-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na QT
 Name:		lincvs
-Version:	1.1.6
-Release:	2
+Version:	1.3.0
+Release:	0.%{_rc}.1
 License:	GPL
 Group:		Development/Version Control
-Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
-# Source0-md5:	1f3792575bdbaa46dc8aa31d5a085a91
+Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/ht_%{name}-%{version}%{_rc}/%{name}-%{version}-%{_rc}-generic-src.tgz
+# Source0-md5:	3812726c55d7df4c497fba43df33b5e4
 Source1:	LinCVS.desktop
 Patch0:		%{name}-config.patch
 URL:		http://www.lincvs.org/
@@ -26,13 +28,13 @@ against the repository or view of the log messages in list form. In
 contrast to other programs this one is REALLY easy to use ;-).
 
 %description -l pl
-LinCVS dzia³a jako wiarygodny (!) graficzny frontend dla klienta CVS.
+LinCVS dzia³a jako niezawodny (!) graficzny frontend dla klienta CVS.
 Pozwala na import modu³ów z i do respozytorium oraz wszelkiego typu
-inne zwyk³e operacje w CVS'ie. W przeciwieñstwie do wielu innych
+inne zwyk³e operacje w CVSie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{_rc}
 %patch0 -p1
 
 %build
@@ -51,7 +53,6 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
 install lincvs.bin $RPM_BUILD_ROOT%{_bindir}/lincvs
 
 install LinCVS/AppIcon.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/lincvs.xpm
-install lincvs.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Development
 
 %clean
@@ -59,8 +60,7 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README SSH-HOWTO.txt PROXY-HOWTO.txt
+%doc AUTHORS ChangeLog NEWS LICENSE COPYING doc/[README,SSH-HOWTO.txt,PROXY-HOWTO.txt]
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Development/*
 %{_pixmapsdir}/*
-%{_mandir}/man1/*
