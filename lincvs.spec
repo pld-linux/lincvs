@@ -15,8 +15,8 @@ Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org/
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
-BuildRequires:	qt-devel >= 3.1
 BuildRequires:	qmake
+BuildRequires:	qt-devel >= 3.1
 Requires:	cvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +36,7 @@ inne zwyk³e operacje w CVS-ie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 export QTDIR=%{_prefix}
