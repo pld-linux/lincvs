@@ -1,0 +1,11 @@
+--- lincvs-1.1.6/config/config.h.orig	Mon Apr 28 09:30:15 2003
++++ lincvs-1.1.6/config/config.h	Mon Apr 28 09:30:24 2003
+@@ -113,7 +113,7 @@
+  * should the situation change.  The default Qt build option is to have built-in
+  * styles compiled-in so the next line should be commented-out by default.
+  */
+-// #define QT_NO_STYLE_WINDOWS
++#define QT_NO_STYLE_WINDOWS
+ 
+ /* Use a win console for qDebug;-), uncomment _only_ on win systems */
+ #ifdef Q_WS_WIN
