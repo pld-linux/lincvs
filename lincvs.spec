@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
+# Source0-md5:	1f3792575bdbaa46dc8aa31d5a085a91
 Source1:	LinCVS.desktop
 Patch0:		%{name}-config.patch
 URL:		http://www.lincvs.org/
