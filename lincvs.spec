@@ -10,12 +10,11 @@ Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}
 Source1:	LinCVS.desktop
 Patch0:		%{name}-config.patch
 URL:		http://www.lincvs.org/
-Requires:	cvs
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	qt-devel >= 3.0.5
+Requires:	cvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 LinCVS acts as a reliable (!) graphical frontend for the CVS-client
@@ -33,9 +32,7 @@ inne zwyk³e operacje w CVS'ie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q
-
 %patch0 -p1
 
 %build
