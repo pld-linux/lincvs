@@ -16,6 +16,7 @@ URL:		http://www.lincvs.org/
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qmake
 Requires:	cvs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
