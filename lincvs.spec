@@ -1,16 +1,17 @@
 
-%define 	_srcrel	1
+%define		_rc	rc1
+%define		_srcrel	1
 
 Summary:	A Qt-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVS-em oparte na Qt
 Name:		lincvs
-Version:	1.3.2
-Release:	2
+Version:	1.3.3
+Release:	1
 # GPL if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL
 Group:		Development/Version Control
-Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/hl_%{name}-%{version}/%{name}-%{version}-%{_srcrel}-generic-src.tgz
-# Source0-md5:	1dd48ddaa98192f271381b2217e0941f
+Source0:	http://lincvs.com/download/%{name}-%{version}%{_rc}-%{_srcrel}-generic-src.tgz
+# Source0-md5:	72cfaf5652bfab4d38a58af1fe90bff5
 Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org/
 BuildRequires:	libstdc++-devel
@@ -36,7 +37,7 @@ inne zwyk³e operacje w CVS-ie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_rc}
 
 %build
 export QTDIR=%{_prefix}
