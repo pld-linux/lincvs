@@ -2,7 +2,7 @@
 %define 	_srcrel	1
 
 Summary:	A Qt-based tool for managing CVS
-Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na Qt
+Summary(pl):	Narzêdzie do zarz±dzania CVS-em oparte na Qt
 Name:		lincvs
 Version:	1.3.2
 Release:	2
@@ -29,9 +29,9 @@ against the repository or view of the log messages in list form. In
 contrast to other programs this one is REALLY easy to use ;-).
 
 %description -l pl
-LinCVS dzia³a jako niezawodny (!) graficzny frontend dla klienta CVS.
+LinCVS dzia³a jako niezawodny(!) graficzny frontend dla klienta CVS.
 Pozwala na import modu³ów z i do repozytorium oraz wszelkiego typu
-inne zwyk³e operacje w CVSie. W przeciwieñstwie do wielu innych
+inne zwyk³e operacje w CVS-ie. W przeciwieñstwie do wielu innych
 programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
