@@ -8,7 +8,6 @@ Group:		Development/Version Control
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Group(pl):	Programowanie/Zarz±dzanie wersjami
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
-Patch0:		%{name}-makefile.patch
 URL:		http://www.lincvs.org
 Requires:	cvs
 BuildRequires:	qt >= 2.0.2
