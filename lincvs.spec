@@ -36,7 +36,7 @@ programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 rm -rf $RPM_BUILD_ROOT
 %setup -q
 
-%patch0 -p1 
+%patch0 -p1
 
 %build
 export QTDIR=%{_prefix}
