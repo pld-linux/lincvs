@@ -5,6 +5,7 @@ Summary(pl):	Narzêdzie do zarz±dzania CVSem oparte na QT
 Name:		lincvs
 Version:	1.3.0
 Release:	0.%{_rc}.1
+# GPL if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/20_LinCVS/ht_%{name}-%{version}%{_rc}/%{name}-%{version}-%{_rc}-generic-src.tgz
@@ -60,7 +61,7 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS LICENSE COPYING doc/[README,SSH-HOWTO.txt,PROXY-HOWTO.txt]
+%doc AUTHORS ChangeLog NEWS LICENSE doc/{README,SSH-HOWTO.txt,PROXY-HOWTO.txt}
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Development/*
 %{_pixmapsdir}/*
