@@ -29,7 +29,7 @@ rm -rf $RPM_BUILD_ROOT
 %setup -q -n LinCVS-%{version}
 
 %build
-make QTDIR=%{_prefix}
+%{__make} QTDIR=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
