@@ -7,7 +7,7 @@ License:	GPL
 Group:		Development/Version Control
 Source0:	http://lincvs.sunsite.dk/download/%{name}-%{version}/%{name}-%{version}-0-generic-src.tgz
 Source1:	LinCVS.desktop
-URL:		http://www.lincvs.org
+URL:		http://www.lincvs.org/
 Requires:	cvs
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
