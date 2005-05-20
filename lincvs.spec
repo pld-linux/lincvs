@@ -4,20 +4,20 @@
 Summary:	A Qt-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVS-em oparte na Qt
 Name:		lincvs
-Version:	1.4.0
+Version:	1.4.1
 Release:	0.1
 # GPL if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://lincvs.com/download/%{name}-%{version}-%{_srcrel}-generic-src.tgz
-# Source0-md5:	bd43babf06b912f2a4b8316dbdfebd71
+# Source0-md5:	59d0ad70c98c11123334e08cf008ff33
 Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org/
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	qmake
-BuildRequires:	qt-devel >= 3.1
-Requires:	cvs
+BuildRequires:	qt-devel >= 3.3
+Requires:	cvs >= 1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
