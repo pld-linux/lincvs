@@ -71,7 +71,7 @@ rm -fr $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}/Messages
 %attr(755,root,root) %{_datadir}/%{name}/lincvs.bin
 %attr(755,root,root) %{_datadir}/%{name}/Tools
-%lang(ca_ES) %{_datadir}/%{name}/Messages/ca_ES.qm
+%lang(ca) %{_datadir}/%{name}/Messages/ca_ES.qm
 %lang(de) %{_datadir}/%{name}/Messages/de.qm
 %lang(es) %{_datadir}/%{name}/Messages/es.qm
 %lang(fr) %{_datadir}/%{name}/Messages/fr.qm
