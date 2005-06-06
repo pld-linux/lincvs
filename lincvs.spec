@@ -5,7 +5,7 @@ Summary:	A Qt-based tool for managing CVS
 Summary(pl):	Narzêdzie do zarz±dzania CVS-em oparte na Qt
 Name:		lincvs
 Version:	1.4.1
-Release:	0.9
+Release:	1
 # GPL if linked with GPLed qt (as in PLD), custom otherwise (see LICENSE)
 License:	GPL
 Group:		Development/Version Control
