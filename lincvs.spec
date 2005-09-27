@@ -15,7 +15,7 @@ Source1:	LinCVS.desktop
 URL:		http://www.lincvs.org/
 BuildRequires:	libtool
 BuildRequires:	qmake
-BuildRequires:	qt-devel >= 3.3
+BuildRequires:	qt-devel >= 6:3.3
 BuildRequires:	sed >= 4.0
 Requires:	cvs >= 1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
