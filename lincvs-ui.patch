@@ -1,0 +1,81 @@
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/AnnotateDialog.ui lincvs-1.4.3/src/AnnotateDialog.ui
+--- lincvs-1.4.3.orig/src/AnnotateDialog.ui	2005-07-25 22:12:46.000000000 +0200
++++ lincvs-1.4.3/src/AnnotateDialog.ui	2005-09-28 02:17:34.000000000 +0200
+@@ -154,6 +154,6 @@
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>cvsfileviewer.h</includehint>
++	<includehint>CvsFileViewer.h</includehint>
+ </includehints>
+ </UI>
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/CheckoutDialog.ui lincvs-1.4.3/src/CheckoutDialog.ui
+--- lincvs-1.4.3.orig/src/CheckoutDialog.ui	2005-07-25 22:12:54.000000000 +0200
++++ lincvs-1.4.3/src/CheckoutDialog.ui	2005-09-28 02:31:15.000000000 +0200
+@@ -1021,6 +1021,6 @@
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>revisionwidgetimpl.h</includehint>
++	<includehint>RevisionWidgetImpl.h</includehint>
+ </includehints>
+ </UI>
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/LogDialog.ui lincvs-1.4.3/src/LogDialog.ui
+--- lincvs-1.4.3.orig/src/LogDialog.ui	2005-07-25 22:13:43.000000000 +0200
++++ lincvs-1.4.3/src/LogDialog.ui	2005-09-28 02:22:55.000000000 +0200
+@@ -1316,7 +1316,7 @@
+ <pixmapinproject/>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>logtreeview.h</includehint>
+-    <includehint>loglistview.h</includehint>
++    <includehint>logtree.h</includehint>
++    <includehint>loglist.h</includehint>
+ </includehints>
+ </UI>
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/ResolvDialog.ui lincvs-1.4.3/src/ResolvDialog.ui
+--- lincvs-1.4.3.orig/src/ResolvDialog.ui	2005-07-25 22:14:03.000000000 +0200
++++ lincvs-1.4.3/src/ResolvDialog.ui	2005-09-28 02:32:53.000000000 +0200
+@@ -348,8 +348,6 @@
+ </slots>
+ <layoutdefaults spacing="0" margin="0"/>
+ <includehints>
+-    <includehint>filetableimpl.h</includehint>
+-    <includehint>filetableimpl.h</includehint>
+-    <includehint>filetableimpl.h</includehint>
++	<includehint>FileTableImpl.h</includehint>
+ </includehints>
+ </UI>
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/settingsdialog.ui lincvs-1.4.3/src/settingsdialog.ui
+--- lincvs-1.4.3.orig/src/settingsdialog.ui	2005-07-25 22:15:30.000000000 +0200
++++ lincvs-1.4.3/src/settingsdialog.ui	2005-09-28 02:25:25.000000000 +0200
+@@ -4446,17 +4446,6 @@
+ <pixmapinproject/>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
++	<includehint>ColorButton.h</includehint>
+ </includehints>
+ </UI>
+diff -U 3 -H -d -r -N -- lincvs-1.4.3.orig/src/UpdateOtherRevisionStdDialog.ui lincvs-1.4.3/src/UpdateOtherRevisionStdDialog.ui
+--- lincvs-1.4.3.orig/src/UpdateOtherRevisionStdDialog.ui	2005-07-25 22:14:21.000000000 +0200
++++ lincvs-1.4.3/src/UpdateOtherRevisionStdDialog.ui	2005-09-28 02:37:04.000000000 +0200
+@@ -214,6 +214,6 @@
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>revisionwidgetimpl.h</includehint>
++	<includehint>RevisionWidgetImpl.h</includehint>
+ </includehints>
+ </UI>
