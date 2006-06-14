@@ -1,0 +1,11 @@
+--- src/PixmapTimer.h.orig	2006-06-13 21:23:26.000000000 +0200
++++ src/PixmapTimer.h	2006-06-13 21:23:43.000000000 +0200
+@@ -84,7 +84,7 @@
+ 
+ public:
+ 	CPixmapTimer(QObject * parent = 0, const char * name = 0);
+-	CPixmapTimer::~CPixmapTimer();
++	~CPixmapTimer();
+ 
+ signals:
+ 	void signalTimeout(const QPixmap &);

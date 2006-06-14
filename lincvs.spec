@@ -12,6 +12,7 @@ Group:		Development/Version Control
 Source0:	http://lincvs.com/download/%{name}-%{version}-%{_srcrel}-generic-src.tgz
 # Source0-md5:	e5bdeeffb2511579b0c9ba3e33f636e8
 Source1:	LinCVS.desktop
+Patch0:		%{name}-gcc4.patch
 URL:		http://www.lincvs.org/
 BuildRequires:	libtool
 BuildRequires:	qmake
@@ -37,6 +38,7 @@ programów jest NAPRAWDÊ prosty w u¿yciu ;-)
 
 %prep
 %setup -q
+%patch0 -p0
 %{__sed} -i 's,`dirname.*,%{_datadir}/%{name},' LinCVS/AppRun
 
 %build
