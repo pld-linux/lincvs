@@ -2,7 +2,7 @@
 %define		_srcrel	0
 
 Summary:	A Qt-based tool for managing CVS
-Summary(pl.UTF-8):   Narzędzie do zarządzania CVS-em oparte na Qt
+Summary(pl.UTF-8):	Narzędzie do zarządzania CVS-em oparte na Qt
 Name:		lincvs
 Version:	1.4.4
 Release:	1
