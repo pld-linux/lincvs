@@ -1,4 +1,6 @@
-
+#
+#### this spec is DEPRECATED - new name is crossvc.spec
+#
 %define		_srcrel	0
 
 Summary:	A Qt-based tool for managing CVS
